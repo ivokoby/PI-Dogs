@@ -1,0 +1,12 @@
+.filter-container {
+    color: aliceblue;
+    font-family: 'Fjalla One';
+    font-size: x-large;
+}
+.filter-container select {
+    background-color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 0.3rem 0.5rem;
+    margin: 5px;
+  }

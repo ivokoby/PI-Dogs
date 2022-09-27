@@ -1,0 +1,44 @@
+.pages {
+    display: relative; 
+    justify-content: center;
+    margin-block: 1rem 6rem;
+}
+  
+.pageNumber {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    width: 42px;
+    height: 42px;
+    color: aliceblue;
+    border-radius: 25%;
+    margin: 1px;
+    user-select: none;
+    cursor: pointer;
+}
+.pageNumber:hover {
+    background-color: grey;
+    color: rgb(134, 170, 254);
+}
+  
+.disabled {
+    color: rgb(125, 125, 125);
+}
+.disabled:hover {
+    background-color: darkgray;
+    color: black;
+    cursor: not-allowed;
+}
+  
+.activePage{
+    background-color:  rgb(25, 43, 85);
+    color: rgb(255, 255, 255);
+}
+  
+@media (min-width:500px) {
+    .pageNumber {
+      width: 45px;
+      height: 45px;
+    }
+}

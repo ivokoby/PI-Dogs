@@ -1,0 +1,50 @@
+body {
+  margin: 0%;
+  padding: 0%;
+}
+
+.carga {
+  background-image: url(../../img/dog2.jpg);
+  background-position: center; 
+  background-size :cover ;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%; 
+  position:fixed;
+}
+  
+.button {
+    font-family: 'Anton';
+    font-size: 21vw;
+    color: rgb(255, 255, 255);
+    margin-bottom: 0.1vw;
+    margin-left: 5rem;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    transition: ease-out 0.5s;
+    outline: none;
+    text-decoration: none;
+    
+  }
+  
+  .button:hover{
+    color: black;
+  }
+
+  .subtitle {
+    font-size: 2vw;
+    font-family: 'Anton';
+    color: aliceblue;
+  }
+  
+  .logos {
+    margin: 0%;
+    margin-left: 5vw;
+  }
+  
+  .icons {
+    width: 5%;
+    height: 10%;
+  }
+  
