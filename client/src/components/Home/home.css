@@ -40,21 +40,6 @@ body {
   justify-content: center;
 }
 
-.home-refresh-btn{
-  background-color:  rgb(25, 43, 85);
-  border: none;
-  color: white;
-  border-radius: 6px;
-  padding: 5px;
-  cursor: pointer;
-  transition: 0.25s;
-  
-}
-.home-refresh-btn:hover {
-  background-color: white;
-  color: black;
-}
-
 .create-dog {
   background-color:  rgb(25, 43, 85);
   border-radius: 6px;

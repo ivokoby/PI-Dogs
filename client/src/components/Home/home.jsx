@@ -42,10 +42,6 @@ const Home = () => {
     !dogs.length && dispatch(getDogs())
     dispatch(getTemperaments())
   }, [dispatch, dogs]);
-  
-  const handleRefresh = () => {
-    dispatch(getDogs());
-  }
 
   return (
     <div ref={appTopRef} className="App">
@@ -62,7 +58,6 @@ const Home = () => {
             Create your dog &nbsp;
             <Link to="/dogs">here</Link>!
           </div>
-          <button className="home-refresh-btn" onClick={handleRefresh}>Refresh</button>
         </div>
 
         {/* dog cards */}

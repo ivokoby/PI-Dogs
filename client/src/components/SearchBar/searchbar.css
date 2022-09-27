@@ -7,7 +7,7 @@
     border-radius: 5px;
     border: none;
     height: 2.25rem;
-    padding-inline: 1rem 2.75rem;
+    padding-inline: 2rem 2.75rem;
     outline: none;
 }
 .searchbar-input::placeholder {

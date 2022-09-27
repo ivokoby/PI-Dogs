@@ -24,9 +24,6 @@ ReactDOM.render(
 // <BrowserRouter>      es para que la Url quede mas prolija: http://url.com/lala
 // <App>                Mi app, en app.js renderizo los componentes
 
-// voy instalando: npm i redux-devtools-extension 
-//                 npm i
-//                 npm i axios
 
 
 reportWebVitals();
