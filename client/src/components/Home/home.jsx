@@ -24,11 +24,12 @@ const Home = () => {
   const indexOfLastDog = actualPage * dogsPerPage;
   const indexOfFirstDog = indexOfLastDog - dogsPerPage;
   const actualDogs = dogs.slice(indexOfFirstDog, indexOfLastDog); //recortamos el arreglo con todos los dogs
-  const [minPageNumber, setMinPageNumber] = useState(0) //este estado y el q está abajo es para hacer el paginado más tikito y que quede lindo, uso ambos para hacer un slice y renderizar sólo ese pedazo
+  const [minPageNumber, setMinPageNumber] = useState(0)
   const [maxPageNumber, setMaxPageNumber] = useState(5)
   const pages = (pageNumber) => {
     setActualPage(pageNumber);
-    appTopRef.current?.scrollIntoView({ behavior: 'smooth' })
+    appTopRef.current?.scrollIntoView({ behavior: 'smooth' })                                                            
+    //desplaza los contenedores ancestros del elemento de manera que el elemento en el que scrollIntoView()se llama sea visible para el usuario.
     if(pageNumber >= maxPageNumber) {
       setMinPageNumber(minPageNumber+4)
       setMaxPageNumber(maxPageNumber+4)

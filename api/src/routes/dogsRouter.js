@@ -74,55 +74,5 @@ router.post('/', async (req, res) => {
   }
 })
 
-router.delete('/:id', async (req, res) => {
-  const id = req.params.id 
-  try {
-    if (id) {
-      const deleteDog = await Dog.findOne({
-        where: { id: id }
-      })
-      if (deleteDog) {
-        await deleteDog.destroy()
-        res.status(200).send('The dog was successfully deleted from existence')
-      }
-      else res.status(404).send('Dog ID not found')
-    } else res.status(400).send("Something went wrong.");
-  } catch (e) {
-    console.log('error try catch', e);
-    res.status(400).send('Dog ID is wrong typed')
-  }
-})
-
-router.put('/:id/edit', async (req,res) => {
-  const id = req.params.id
-  
-  try {
-    const editableDog = await Dog.findByPk(id)
-
-    if (Object.keys(editableDog).length) {
-      if(req.body.name) req.body.name = req.body.name[0].toUpperCase() + req.body.name.slice(1) //si modifican el name, lo paso a mayus
-      
-      await Dog.update(req.body, { //método de sequelize. recibe dos params ({obj con datos a actualizar}, {where hacerlo})
-        where: { id: id}
-      })
-
-      if (req.body.temperaments) { //seteo los temperamentos solamente si me los pasan x body (si no lo hago tira error)
-        const temperamentAux = await Temperaments.findAll({
-          where:{
-            name: req.body.temperaments
-          }
-        })
-        editableDog.setTemperaments(temperamentAux)
-      }
-
-      res.status(200).send('The dog was successfully edited!')
-    }
-    else res.status(404).send('Dog ID not found')
-  
-  } catch (e) {
-    console.log('error PUT try catch', e);
-    res.status(400).send('Dog ID is wrong typed')
-  }
-})
 
 module.exports = router 
