@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { getById, clearDetail, deleteDog } from '../../redux/actions/actions.js'
+import { getById, clearDetail } from '../../redux/actions/actions.js'
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams, useHistory } from "react-router-dom";
 import Loader from "../Loader/loader.js";

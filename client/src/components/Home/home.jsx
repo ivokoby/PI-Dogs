@@ -44,11 +44,15 @@ const Home = () => {
     dispatch(getTemperaments())
   }, [dispatch, dogs]);
 
+  const handleRefresh = () => {
+    dispatch(getDogs())
+  }
+
   return (
     <div ref={appTopRef} className="App">
       
       <div className="home-container">
-
+      
         <div className="sort-filter-container">
           <div className="sort-filter">
             <Filters setMinPageNumber={setMinPageNumber} setMaxPageNumber={setMaxPageNumber} setActualPage={setActualPage} />
@@ -59,6 +63,7 @@ const Home = () => {
             Create your dog &nbsp;
             <Link to="/dogs">here</Link>!
           </div>
+          <button className="home-refresh-btn" onClick={handleRefresh}>Refresh</button>
         </div>
 
         {/* dog cards */}

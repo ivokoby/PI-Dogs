@@ -89,7 +89,22 @@ body {
 
 .home-button:hover {
   color: aliceblue;
-  background-color:rgb(55, 79, 134);;
+  background-color:rgb(55, 79, 134);
+}
+
+.home-refresh-btn {
+  background-color: rgb(25, 43, 85);
+  border: none;
+  color: white;
+  border-radius: 6px;
+  padding: 5px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.home-refresh-btn:hover {
+  background-color: white;
+  color: black;
 }
 
 @media (min-width: 600px) {

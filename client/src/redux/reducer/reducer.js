@@ -113,16 +113,6 @@ function rootReducer(state = initialState, action) {
         ...state,
       };
 
-    case "DELETE_DOG":
-      return {
-        ...state,
-      };
-    
-    case "EDIT_DOG":
-      return {
-        ...state,
-      };
-
     default:
       return { ...state };
   }

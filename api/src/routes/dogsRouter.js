@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const { Dog, Temperaments } = require("../db.js");
-const { getAll } = require('../controllers/controllers.js')
+const { getAll } = require('../controllers/controllers.js');
 
 // '/dogs' 
 
@@ -56,7 +56,7 @@ router.post('/', async (req, res) => {
         name: name[0].toUpperCase() + name.slice(1), 
         height: `${height_min} - ${height_max}`, 
         weight: `${weight_min} - ${weight_max}`, 
-        life_span: life_span_min && life_span_max ? `${life_span_min} - ${life_span_max} years` : null, 
+        life_span: life_span_min && life_span_max ? `${life_span_min} - ${life_span_max} years` : null,
         image: image ? image : './img/fenix.jpeg', 
         DB_created
       })
