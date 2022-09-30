@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { getById, clearDetail } from '../../redux/actions/actions.js'
+import { getById, clearDetail, deleteDog } from '../../redux/actions/actions.js'
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams, useHistory } from "react-router-dom";
 import Loader from "../Loader/loader.js";
@@ -16,6 +16,11 @@ const Detail = () => {
     dispatch(clearDetail())
   }, [dispatch, id])
   
+  const handleDeleteDog = () => {
+    dispatch(deleteDog(id))
+    history.push('/Home')
+  }
+
   const goBack = () => {
     history.push('/Home')
   }
@@ -51,6 +56,9 @@ const Detail = () => {
                 ? <p>{details.temperaments.length ? `My temperament is: ${details.temperaments}.` : null}</p>
                 : null
               }
+              <div>
+                {details.createdInDB && <button className="home-button" onClick={handleDeleteDog}>Delete</button>}
+              </div>
             </div>
           </div>
         ) : (
